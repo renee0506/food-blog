@@ -1,6 +1,8 @@
-<h1>Food Blog</h1>
-{{#link-to 'about'}}About{{/link-to}} {{#link-to 'contact'}}Contact{{/link-to}}
-  {{#each model as |post|}}
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-8">
+    {{#each model as |post|}}
     {{blog-post post = post}}
-  {{/each}}
-{{new-post savePost="savePost"}}
+    {{/each}}
+  </div>

@@ -1,4 +1,9 @@
-<h1>{{model.title}}</h1>
-<h4>{{model.author}}, {{model.date}}</h4>
-<img src="{{model.image}}">
-{{{model.content}}}
+<div class="container post-body">
+  <h1>{{model.title}}</h1>
+  <h4>By {{model.author}}, {{model.date}}</h4>
+  <img src="{{model.image}}" class="image">
+  <hr>
+  <p class="blogContent">{{{model.content}}}</p>
+  {{update-post post=model update="update" delete="delete"}}
+
+</div>

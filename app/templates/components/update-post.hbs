@@ -1,6 +1,7 @@
-{{#if formShow}}
-  <div id="new-post">
-    <h2>Add New Post</h2>
+<button {{action 'delete' post}} class="btn btn-danger">Delete</button>
+{{#if updateFormShow}}
+  <div id="update-post">
+    <h2>Update Post</h2>
     <form class="form-group">
       <label for="title" >Title</label>
       {{input value=title placeholder=post.title class='form-control'}}<br>
@@ -11,10 +12,10 @@
       <label for="image">Image URL</label>
       {{input value=image placeholder=post.image class='form-control'}}<br>
       <label for="content">Content</label>
-      {{textarea value=content placeholder=post.content class='form-control' rows="25" cols="50"}}<br>
-      <button {{action 'savePost'}} class="btn btn-default">Save</button>
+      {{textarea value=content placeholder=post.content class='form-control' rows="20" cols="50"}}<br>
+      <button {{action 'update' post}} class="btn btn-primary">Save</button>
     </form>
   </div>
   {{else}}
-  <button {{action 'showPostForm'}} class="btn btn-default">Add new post</button>
+<button {{action 'showUpdateForm'}} class="btn btn-default">Update Post</button>
   {{/if}}

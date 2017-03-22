@@ -1,6 +1,10 @@
-{{#link-to 'post' post.id}}<h3>{{post.title}}</h3>{{/link-to}}
-<h6>{{post.author}}</h6>
-<h6>{{post.date}}</h6>
-<img src="{{post.image}}" alt="" />
-<br>
-  {{{post.content}}}
+<div class="row content">
+  <div class="col-md-6">
+    <img src="{{post.image}}" alt="" class="image"/>
+  </div>
+  <div class="col-md-6">
+    {{#link-to 'post' post.id}}<h3>{{post.title}}</h3>{{/link-to}}
+    <h6>{{post.author}}</h6>
+    <h6>{{post.date}}</h6>
+  </div>
+</div>
