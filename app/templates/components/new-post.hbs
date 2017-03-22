@@ -1,0 +1,17 @@
+{{#if formShow}}
+<form>
+  <label for="title">Title</label>
+  {{input value=title placeholder=post.title}}<br>
+  <label for="author">Author</label>
+  {{input value=author placeholder=post.author}}<br>
+  <label for="date">Date</label>
+  {{input value=date placeholder=post.date}}<br>
+  <label for="image">Image URL</label>
+  {{input value=image placeholder=post.image}}<br>
+  <label for="content">Content</label>
+  {{textarea value=content placeholder=post.content}}<br>
+  <button {{action 'savePost'}}>Save</button>
+</form>
+{{else}}
+<button {{action 'showPostForm'}}>Add new post</button>
+{{/if}}
