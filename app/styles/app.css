@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fanwood+Text');
+
 .image {
   max-width: 500px;
   max-height: 800px;
@@ -56,4 +58,22 @@ a {
 }
 .form-control {
   margin: 10px;
+}
+
+h3 {
+  font-family: 'Fanwood Text', serif;
+  font-size: 50px;
+}
+
+h6 {
+  font-family: 'Fanwood Text', serif;
+  font-size: 25px;
+}
+
+.box {
+  background-color: white;
+  box-shadow: 0px 1px 50px #5E5E5E;
+  width:80%;
+  margin-top: 20px;
+  padding:10px;
 }

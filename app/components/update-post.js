@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         date: this.get('date'),
         image: this.get('image'),
         content: this.get('content'),
+        category: this.get('category')
       };
       this.set('updateFormShow', false);
       this.sendAction('update', post, params);

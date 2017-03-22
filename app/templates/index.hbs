@@ -1,8 +1,13 @@
   <div class="col-md-4">
-
+    <div class="box">
+      <h4>Categories</h4>
+      {{#each model.categories as |category|}}
+      {{category-tile category = category}}
+      {{/each}}
+    </div>
   </div>
   <div class="col-md-8">
-    {{#each model as |post|}}
+    {{#each model.posts as |post|}}
     {{blog-post post = post}}
     {{/each}}
   </div>
