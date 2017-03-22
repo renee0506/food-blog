@@ -1,1 +1,14 @@
-{{model.name}}
+<div class="col-md-4">
+  <div class="box">
+    <h4>{{Categories}}</h4>
+    {{#each model.categories as |category|}}
+    {{category-tile category = category}}
+    {{/each}}
+  </div>
+</div>
+<div class="col-md-8">
+  <h2>Showing Posts in Cateogry: {{model.category}}</h2>
+  {{#each model.posts as |post|}}
+  {{blog-post post = post}}
+  {{/each}}
+</div>
