@@ -1,4 +1,7 @@
   <div class="col-md-4">
+    <div class="add">
+      {{new-post model=model.categories savePost="savePost"}}
+    </div>
     <div class="box">
       <h4>Categories</h4>
       {{#each model.categories as |category|}}

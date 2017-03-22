@@ -11,9 +11,13 @@
       <label for="image">Image URL</label>
       {{input value=image placeholder=post.image class='form-control'}}<br>
       <label for="category">Category</label>
-      {{input value=category placeholder=post.category class='form-control'}}<br>
+      <select class='form-control'>
+              {{#each model as |category|}}
+          <option value={{category.name}}>{{category.name}}</option>
+                {{/each}}
+      </select>
       <label for="content">Content</label>
-      {{textarea value=content placeholder=post.content class='form-control' rows="25" cols="50"}}<br>
+      {{textarea value=content placeholder=post.content class='form-control' rows="18" cols="50"}}<br>
       <button {{action 'savePost'}} class="btn btn-default">Save</button>
     </form>
   </div>
