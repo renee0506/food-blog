@@ -10,9 +10,9 @@
     </div>
     <div class="box row">
       <h4>Recent Comments</h4>
-      <ul>
+      <ul class="list-unstyled">
       {{#each model.comments as |comment|}}
-      <li>"{{comment.content}}" {{comment.post.title}}<br>--{{comment.author}}, {{comment.date}}</li>
+      <li>"{{comment.content}}" <br><em>{{comment.post.title}}</em><br>---{{comment.author}}, {{comment.date}}</li><br>
       {{/each}}
     </ul>
     </div>

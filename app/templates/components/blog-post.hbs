@@ -1,10 +1,12 @@
-{{#link-to 'post' post.id}}<div class="row content">
+{{#link-to 'post' post.id}}
+<div class="row content">
   <div class="col-md-6">
     <img src="{{post.image}}" alt="" class="image"/>
   </div>
   <div class="col-md-6">
     {{#link-to 'post' post.id}}<h3>{{post.title}}</h3>{{/link-to}}
-    <h6>By {{post.author}}, {{post.date}}</h6>
+    <h6>By <em>{{post.author}}, {{post.date}}</em></h6>
+    <br>
     <p class="text-body">
       {{{post.content}}}
     </p>

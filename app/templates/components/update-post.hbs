@@ -4,13 +4,13 @@
     <h2>Update Post</h2>
     <form class="form-group">
       <label for="title" >Title</label>
-      {{input value=title placeholder=post.title class='form-control'}}<br>
+      {{input value=title placeholder=post.post.title class='form-control'}}<br>
       <label for="author">Author</label>
-      {{input value=author placeholder=post.author class='form-control'}}<br>
+      {{input value=author placeholder=post.post.author class='form-control'}}<br>
       <label for="date">Date</label>
-      {{input value=date placeholder=post.date class='form-control'}}<br>
+      {{input type="date" placeholder=post.post.date class='form-control'}}<br>
       <label for="image">Image URL</label>
-      {{input value=image placeholder=post.image class='form-control'}}<br>
+      {{input value=image placeholder=post.post.image class='form-control'}}<br>
       <label for="category">Category</label>
       <select class='form-control'>
               {{#each post.categories as |category|}}
@@ -18,7 +18,7 @@
                 {{/each}}
       </select>
       <label for="content">Content</label>
-      {{textarea value=content placeholder=post.content class='form-control' rows="20" cols="50"}}<br>
+      {{textarea value=content placeholder=post.post.content class='form-control' rows="20" cols="50"}}<br>
       <button {{action 'update' post}} class="btn btn-primary">Save</button>
       <button {{action 'hideUpdateForm'}} class="btn btn-default">Cancel</button>
     </form>

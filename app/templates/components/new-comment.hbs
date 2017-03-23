@@ -5,12 +5,13 @@
       <label for="author">Author</label>
       {{input value=author placeholder=comment.author class='form-control'}}<br>
       <label for="date">Date</label>
-      {{input value=date placeholder=comment.date class='form-control'}}<br>
+      {{input value=date type="date" placeholder=comment.date class='form-control'}}<br>
       <label for="content">Content</label>
       {{textarea value=content placeholder=comment.content class='form-control' rows="18" cols="50"}}<br>
       <button {{action 'saveComment'}} class="btn btn-default">Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'commentFormShow'}} class="btn btn-default">Add new Comment</button>
+  <br>
+  <button {{action 'commentFormShow'}} class="btn btn-default btn-sm">Add new Comment</button>
 {{/if}}

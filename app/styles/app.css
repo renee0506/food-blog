@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Fanwood+Text');
 
 .image {
-  max-width: 500px;
-  max-height: 800px;
+  max-width: 100%;
+  max-height: 750px;
 }
 
 nav
@@ -17,6 +17,7 @@ nav
 .navbar-default {
     background-color: rgba(255,255,255,0.9)!important;
     border-color: #e7e7e7;
+    border-radius: 0;
 }
 
 header {
@@ -31,6 +32,8 @@ header {
   padding-top:20px;
   padding-bottom: 20px;
   box-shadow: 0px 1px 50px #5E5E5E;
+  height: 800px;
+  background:white;
 }
 
 .page {
@@ -44,9 +47,12 @@ a {
 .post-body {
   width: 50%;
   margin-bottom: 50px;
+  background: white;
+  padding: 30px;
+  box-shadow: 0px 1px 50px #5E5E5E;
 }
 
-#new-post, #update-post{
+#new-post, #update-post, #update-comment{
   text-align: center;
   position: fixed;
   top:8vh;
@@ -63,7 +69,9 @@ a {
 
 h3 {
   font-family: 'Fanwood Text', serif;
-  font-size: 50px;
+  font-size: 70px;
+  margin-top: 20%;
+  margin-right: 5%;
 }
 
 h6 {
@@ -73,10 +81,10 @@ h6 {
 
 .box {
   background-color: white;
-  box-shadow: 0px 1px 50px #5E5E5E;
+  box-shadow: 0px 1px 30px #5E5E5E;
   width:80%;
   margin-top: 20px;
-  padding:10px;
+  padding:20px;
 }
 
 .add {
@@ -87,7 +95,25 @@ h6 {
   font-family: 'Fanwood Text', serif;
   overflow: hidden;
   display: block;
-  height:500px;
+  height:300px;
   font-size: 18px;
-  width:400px;
+  width:80%;
+}
+
+.new-post {
+  border-radius: 0;
+  box-shadow: 0px 1px 20px #5E5E5E;
+}
+
+.commentButton {
+  display: inline-flex;
+}
+
+.comment {
+  font-size: 16px;
+  line-height: 2;
+}
+
+body {
+  background-image: url(http://jruisoft.com/wp-content/uploads/2017/02/Wood-Table-Background-91-with-Wood-Table-Background.jpg);
 }

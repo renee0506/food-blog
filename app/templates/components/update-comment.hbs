@@ -1,16 +1,17 @@
-{{#if updateCommentFormShow}}
-  <div id="update-comment">
-    <h2>Update Comment</h2>
-    <form class="form-group">
-      <label for="author">Author</label>
-      {{input value=author placeholder=comment.author class='form-control'}}<br>
-      <label for="date">Date</label>
-      {{input value=date placeholder=comment.date class='form-control'}}<br>
-      <label for="content">Content</label>
-      {{textarea value=content placeholder=comment.content class='form-control' rows="18" cols="50"}}<br>
-      <button {{action 'updateComment' comment}} class="btn btn-default">Save</button>
-    </form>
-  </div>
-{{else}}
-  <button {{action 'showUpdateCommentForm'}} class="btn btn-default">Update Comment</button>
-{{/if}}
+  {{#if updateCommentFormShow}}
+    <div id="update-comment">
+      <h2>Update Comment</h2>
+      <form class="form-group">
+        <label for="author">Author</label>
+        {{input value=author placeholder=comment.author class='form-control'}}<br>
+        <label for="date">Date</label>
+        {{input value=date placeholder=comment.date class='form-control'}}<br>
+        <label for="content">Content</label>
+        {{textarea value=content placeholder=comment.content class='form-control' rows="18" cols="50"}}<br>
+        <button {{action 'updateComment' comment}} class="btn btn-default">Save</button>
+        <button {{action 'hideCommentForm'}} class="btn btn-default">Cancel</button>
+      </form>
+    </div>
+  {{else}}
+    <button {{action 'showUpdateCommentForm'}} class="btn btn-default btn-xs">Update Comment</button>
+  {{/if}}

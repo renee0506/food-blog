@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showUpdateCommentForm() {
       this.set('updateCommentFormShow', true);
     },
+    hideCommentForm() {
+      this.set('updateCommentFormShow', false);
+    },
     updateComment(comment) {
       var params = {
         author: this.get('author'),

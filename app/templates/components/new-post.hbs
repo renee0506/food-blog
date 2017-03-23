@@ -7,7 +7,7 @@
       <label for="author">Author</label>
       {{input value=author placeholder=post.author class='form-control'}}<br>
       <label for="date">Date</label>
-      {{input value=date placeholder=post.date class='form-control'}}<br>
+      {{input type="date" placeholder=post.date class='form-control'}}<br>
       <label for="image">Image URL</label>
       {{input value=image placeholder=post.image class='form-control'}}<br>
       <label for="category">Category</label>
@@ -23,5 +23,5 @@
     </form>
   </div>
   {{else}}
-  <button {{action 'showPostForm'}} class="btn btn-default">Add new post</button>
+  <button {{action 'showPostForm'}} class="btn btn-default new-post "><span class="glyphicon glyphicon-pencil"></span> New Post</button>
   {{/if}}

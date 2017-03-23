@@ -33,7 +33,7 @@ export default Ember.Route.extend({
       newComment.save().then(function() {
         return post.save();
       });
-      this.transitionTo('post', post);
+      this.transitionTo('post');
     },
     destroyComment(comment) {
       comment.destroyRecord();
