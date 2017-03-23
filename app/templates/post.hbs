@@ -4,6 +4,12 @@
   <img src="{{model.image}}" class="image">
   <hr>
   <p class="blogContent">{{{model.content}}}</p>
+  <h2>Comments</h2>
+  <ul>
+    {{#each model.comments as |comment|}}
+      {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
+    {{/each}}
+  </ul>
   {{update-post post=model update="update" delete="delete"}}
-
+  {{new-comment saveComment="saveComment" post=model}}
 </div>

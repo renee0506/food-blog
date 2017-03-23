@@ -1,0 +1,3 @@
+<li>{{comment.author}}, {{comment.date}}<br>{{comment.content}}</li>
+<button {{action 'delete' comment}} class="btn btn-default">Delete Comment</button>
+{{update-comment comment=comment updateComment="updateComment"}}
