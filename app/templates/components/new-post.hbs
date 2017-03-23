@@ -19,6 +19,7 @@
       <label for="content">Content</label>
       {{textarea value=content placeholder=post.content class='form-control' rows="18" cols="50"}}<br>
       <button {{action 'savePost'}} class="btn btn-default">Save</button>
+      <button {{action 'hidePostForm'}} class="btn btn-default">Cancel</button>
     </form>
   </div>
   {{else}}

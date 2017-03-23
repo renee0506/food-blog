@@ -18,6 +18,9 @@ export default Ember.Component.extend({
 
     showPostForm() {
       this.set('formShow', true);
+    },
+    hidePostForm() {
+      this.set("formShow", false);
     }
   }
 });

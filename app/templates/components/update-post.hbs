@@ -12,10 +12,15 @@
       <label for="image">Image URL</label>
       {{input value=image placeholder=post.image class='form-control'}}<br>
       <label for="category">Category</label>
-      {{input value=category placeholder=post.category class='form-control'}}<br>
+      <select class='form-control'>
+              {{#each post.categories as |category|}}
+          <option value={{category.name}}>{{category.name}}</option>
+                {{/each}}
+      </select>
       <label for="content">Content</label>
       {{textarea value=content placeholder=post.content class='form-control' rows="20" cols="50"}}<br>
       <button {{action 'update' post}} class="btn btn-primary">Save</button>
+      <button {{action 'hideUpdateForm'}} class="btn btn-default">Cancel</button>
     </form>
   </div>
   {{else}}

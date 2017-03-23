@@ -1,15 +1,16 @@
 <div class="container post-body">
-  <h1>{{model.title}}</h1>
-  <h4>By {{model.author}}, {{model.date}}</h4>
-  <img src="{{model.image}}" class="image">
+  <h1>{{model.post.title}}</h1>
+  <h4>By {{model.post.author}}, {{model.post.date}}</h4>
+  <img src="{{model.post.image}}" class="image">
   <hr>
-  <p class="blogContent">{{{model.content}}}</p>
+  <p class="blogContent">{{{model.post.content}}}</p>
   <h2>Comments</h2>
   <ul>
-    {{#each model.comments as |comment|}}
+    {{#each model.post.comments as |comment|}}
       {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
     {{/each}}
   </ul>
+  {{new-comment saveComment="saveComment" post=model.post}}
+  <hr>
   {{update-post post=model update="update" delete="delete"}}
-  {{new-comment saveComment="saveComment" post=model}}
 </div>

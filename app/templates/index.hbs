@@ -2,11 +2,19 @@
     <div class="add">
       {{new-post model=model.categories savePost="savePost"}}
     </div>
-    <div class="box">
+    <div class="box row">
       <h4>Categories</h4>
       {{#each model.categories as |category|}}
       {{category-tile category = category}}
       {{/each}}
+    </div>
+    <div class="box row">
+      <h4>Recent Comments</h4>
+      <ul>
+      {{#each model.comments as |comment|}}
+      <li>"{{comment.content}}" {{comment.post.title}}<br>--{{comment.author}}, {{comment.date}}</li>
+      {{/each}}
+    </ul>
     </div>
   </div>
   <div class="col-md-8">
